@@ -55,6 +55,29 @@ def reverse_list_mutation(list, previous=nil)
   return previous   
 end
 
+# def infinite(list)
+#   #set tortoise and hare to 1st node
+#   tortoise = list
+#   hare = list
+#   if hare == nil
+#     return 'false'
+#   else
+#     while list
+#       hare = list.next_node     ## move hare once
+#       list = list.next_node     ## overwrite first element
+#       hare = list.next_node     ## move hare twice
+#       tortoise = list           ## move tortoise once
+#       if hare == nil
+#         return 'false'
+#       elsif hare == tortoise
+#         return 'true'
+#       end
+#       puts "hare: #{hare.value}"
+#       puts "tortoise: #{tortoise.value}"
+#     end
+#   end
+# end
+
 def print_values(list_node)
   if list_node
     print "#{list_node.value} --> "
@@ -69,6 +92,7 @@ node1 = LinkedListNode.new(40)
 node2 = LinkedListNode.new(30, node1)
 node3 = LinkedListNode.new(20, node2)
 node4 = LinkedListNode.new(10, node3)
+# node1.next_node = node4 # ---> WRITE A CYCLE DETECTION METHOD
 
 # stack = Stack.new
 # stack.push(1)
@@ -93,3 +117,5 @@ puts "-----------"
 revlist2 = reverse_list_mutation(node4)
 
 print_values(revlist2)
+
+# puts infinite(node4)
