@@ -20,18 +20,19 @@ NOTES ON HOW TO BRANCH OUT
  `git status` to verify everything is as expected
 
  `git diff origin/master` for more details
+ 
 
  `git commit -am "your-message"`
 
- (=== `git add .` and then `git commit -m "your message"`
+ (=== `git add .` and then `git commit -m "your-message"`
 
- You could also `git add <individual-files>` `git commit -m "your message"`)
+ You could also `git add <individual-files>` `git commit -m "your-message"`)
 
  OR `git add <the-files-that-are-ok>`
 
  `git checkout <those-that-are-not-ok>`
 
- `git commit -m "message"`
+ `git commit -m "you-message"`
 
  `git push origin <your-branch-name>`
 
