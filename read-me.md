@@ -1,7 +1,7 @@
 NOTES ON HOW TO BRANCH OUT
 
 
- Checkout a branch
+ - Checkout a branch
 
  `git checkout -b <your-branch-name>`
 
@@ -13,8 +13,9 @@ NOTES ON HOW TO BRANCH OUT
  `git status` to verify being on the expected branch
 
 
- Make the changes needed
+ - Make the wanted changes
 
+ - Then:
 
  `git status` to verify everything is as expected
 
@@ -27,9 +28,13 @@ NOTES ON HOW TO BRANCH OUT
  You could also `git add <individual-files>` `git commit -m "your message"`)
 
  OR `git add <the-files-that-are-ok>`
+
  `git checkout <those-that-are-not-ok>`
+
  `git commit -m "message"`
+
  `git push origin <your-branch-name>`
+
 
  - Open a pull request on GitHub
 
