@@ -20,7 +20,7 @@ NOTES ON HOW TO BRANCH OUT
  `git status` to verify everything is as expected
 
  `git diff origin/master` for more details
- 
+
 
  `git commit -am "your-message"`
 
@@ -30,9 +30,9 @@ NOTES ON HOW TO BRANCH OUT
 
  OR `git add <the-files-that-are-ok>`
 
- `git checkout <those-that-are-not-ok>`
+ `git checkout -- <those-that-are-not-ok>` to discard changes in working directory
 
- `git commit -m "you-message"`
+ `git commit -m "your-message"`
 
  `git push origin <your-branch-name>`
 

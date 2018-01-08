@@ -55,28 +55,20 @@ def reverse_list_mutation(list, previous=nil)
   return previous   
 end
 
-# def infinite(list)
-#   #set tortoise and hare to 1st node
-#   tortoise = list
-#   hare = list
-#   if hare == nil
-#     return 'false'
-#   else
-#     while list
-#       hare = list.next_node     ## move hare once
-#       list = list.next_node     ## overwrite first element
-#       hare = list.next_node     ## move hare twice
-#       tortoise = list           ## move tortoise once
-#       if hare == nil
-#         return 'false'
-#       elsif hare == tortoise
-#         return 'true'
-#       end
-#       puts "hare: #{hare.value}"
-#       puts "tortoise: #{tortoise.value}"
-#     end
-#   end
-# end
+def infinite?(list)
+  ## set tortoise and hare to 1st node
+  tortoise = list
+  hare = list
+  while list
+    return false if hare == nil
+    hare = hare.next_node             ## move hare once
+    return false if hare == nil
+    return true if hare == tortoise
+    tortoise = tortoise.next_node     ## move tortoise once
+    hare = hare.next_node             ## move hare twice
+  end
+  false  ## if list is nil
+end
 
 def print_values(list_node)
   if list_node
@@ -92,7 +84,7 @@ node1 = LinkedListNode.new(40)
 node2 = LinkedListNode.new(30, node1)
 node3 = LinkedListNode.new(20, node2)
 node4 = LinkedListNode.new(10, node3)
-# node1.next_node = node4 # ---> WRITE A CYCLE DETECTION METHOD
+node1.next_node = node4 ## ---> looped
 
 # stack = Stack.new
 # stack.push(1)
@@ -104,18 +96,18 @@ node4 = LinkedListNode.new(10, node3)
 # puts stack.pop
 # puts stack.pop
 
-print_values(node4)
+# print_values(node4)
 
-puts "--------"
+# puts "--------"
 
-revlist = reverse_list(node4)
+# revlist = reverse_list(node4)
 
-print_values(revlist)
+# print_values(revlist)
 
-puts "-----------"
+# puts "-----------"
 
-revlist2 = reverse_list_mutation(node4)
+# revlist2 = reverse_list_mutation(node4)
 
-print_values(revlist2)
+# print_values(revlist2)
 
-# puts infinite(node4)
+puts infinite?(node4)
